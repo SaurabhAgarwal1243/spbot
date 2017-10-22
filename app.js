@@ -79,7 +79,7 @@ function processPostback(event) {
     } else if (payload === "Incorrect") {
         sendMessage(senderId, {text: "Oops! Sorry about that. Try using the exact title of the movie"});
     }
-}
+};
 
 function processMessage(event) {
     if (!event.message.is_echo) {
@@ -113,7 +113,7 @@ function processMessage(event) {
             sendMessage(senderId, {text: "Sorry, I don't understand your request."});
         }
     }
-}
+};
 
 // sends message to user
 function sendMessage(recipientId, message) {
@@ -131,7 +131,7 @@ function sendMessage(recipientId, message) {
         }
     });
 
-}
+};
 
 function getMovieDetail(userId, field) {
     Movie.findOne({user_id: userId}, function(err, movie) {
@@ -141,7 +141,7 @@ function getMovieDetail(userId, field) {
             sendMessage(userId, {text: movie[field]});
         }
     });
-}
+};
 
 function findMovie(userId, movieTitle) {
     request("http://www.omdbapi.com/?type=movie&amp;t=" + movieTitle, function (error, response, body) {
@@ -198,4 +198,4 @@ function findMovie(userId, movieTitle) {
             sendMessage(userId, {text: "Something went wrong. Try again."});
         }
     });
-}
+};
