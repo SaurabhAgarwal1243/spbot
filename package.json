@@ -1,18 +1,25 @@
 {
   "name": "spbot",
   "version": "1.0.0",
-  "description": "spbot server",
-  "main": "app.js",
+  "description": "spbot for facebook",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaurabhAgarwal1243/spbot.git"
   },
   "author": "Saurabh Agarwal",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaurabhAgarwal1243/spbot/issues"
+  },
+  "homepage": "https://github.com/SaurabhAgarwal1243/spbot#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "mongoose": "^4.12.4",
+    "mongoose": "^4.13.4",
     "request": "^2.83.0"
   }
 }
